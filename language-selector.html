@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Nolhan Desseigne - Language Selection / Sélection de Langue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container-center {
+            text-align: center;
+        }
+        .language-buttons {
+            margin-top: 40px;
+        }
+        .btn-language {
+            padding: 20px 40px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+        .btn-french {
+            background-color: #4a90e2;
+            border-color: #4a90e2;
+            color: white;
+        }
+        .btn-french:hover {
+            background-color: #357abd;
+            border-color: #357abd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+        }
+        .btn-english {
+            background-color: #e74c3c;
+            border-color: #e74c3c;
+            color: white;
+        }
+        .btn-english:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4a90e2, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        p {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+        .flag {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-center">
+        <h1>Nolhan Desseigne</h1>
+        <h2 style="color: #bbb; font-size: 24px; margin-bottom: 40px;">Multimedia & Internet Portfolio</h2>
+        
+        <p>Please select your preferred language / Veuillez sélectionner votre langue préférée</p>
+
+        <div class="language-buttons">
+            <a href="index.html" class="btn btn-language btn-french">
+                <div class="flag">🇫🇷</div>
+                <strong>Français</strong>
+                <div style="font-size: 14px; margin-top: 5px;">French Version</div>
+            </a>
+            <a href="en/index.html" class="btn btn-language btn-english">
+                <div class="flag">🇬🇧</div>
+                <strong>English</strong>
+                <div style="font-size: 14px; margin-top: 5px;">English Version</div>
+            </a>
+        </div>
+
+        <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #444;">
+            <p style="color: #888; font-size: 12px; margin: 0;">
+                © 2024 Nolhan Desseigne. All rights reserved. | Tous droits réservés.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

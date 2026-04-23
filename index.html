@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Portfolio Nolhan Desseigne</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <section class="header">
+            <h1 class="logo-txt">Nolhan – Monteur Vidéo & Post‑production</h1>
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="logo, va sur la page acceuil"><img src="images/logo.png"
+                        alt="Logo de Nolhan Monteur" class="logo-main"></a>
+                <div class="nav-prime">
+                    <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                    <a href="projets.html" aria-label="page des projets"> Projets </a>
+                    <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                    <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+                </div>
+                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="pdf download" title="Pdf" target="_blank"
+                    class="cv" download > CV (.pdf) </a>
+                <div class="hamburger-menu" aria-label="Menu mobile">
+                    <i class="bi bi-list"></i>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <a href="#" class="bouton_up" aria-label="boutton pour remonter en haut de la page">
+        <span class="icone accueil" aria-hidden="true"></span>
+        <span class="hors-ecran">Accueil</span>
+        <i class="bi bi-caret-up-fill"></i>
+    </a>
+
+    <main>
+        <!-- Section Héro -->
+        <section class="container my-5 py-5 hero-section">
+            <div class="row align-items-center g-5">
+                <div class="col-md-5 text-center position-relative hero-img-col">
+                    <div class="hero-img-glow"></div>
+                    <img src="images/pdp_linkedin_trasparent.png" alt="Nolhan Desseigne"
+                        class="img-fluid rounded-circle hero-img" style="max-width: 350px;">
+                </div>
+                <div class="col-md-7 hero-text-col">
+                    <h6>Créatif, Déterminé, Curieux</h6>
+                    <h7>Nolhan Desseigne<br /><span class="text-gradient">Monteur / Motion Designer</span></h7>
+                    <p class="text-start hero-p">
+                        Actuellement en 3ᵉ année de BUT Métiers du Multimédia et de l’Internet à Haguenau, je
+                        développe mes compétences en vidéo, son, post‑production, motion design et graphisme.
+                    </p>
+                    <p class="text-start hero-p">
+                        Créatif et passionné, je réalise des vidéos, dessine et m’intéresse aux jeux vidéo, à la
+                        programmation et au cinéma, notamment Star Wars.
+                    </p>
+                    <p class="text-start hero-p">
+                        De 2020 à 2023, j’ai étudié aux États‑Unis (anglais C1), participé au journal du lycée, créé
+                        des jeux VR avec Unity et réalisé des projets 3D sur AutoCAD, enrichissant mes compétences
+                        et mes projets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Mes Projets - Bento Grid -->
+        <section class="projects-section bento-section">
+            <h2>Mes Projets</h2>
+
+            <div class="bento-grid" id="bentoGrid">
+
+                <!-- Angles Mort (Featured) -->
+                <div class="bento-card bento-featured" onclick="window.location.href='projets/anglemort.html'">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/bJQzZAbQZDo?si=4sSRH82-1utTj3Mb"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Angles Mort</h5>
+                        <p>Réalisation d'un court métrage de 2 minutes hors générique sous le thème "Passer entre les
+                            gouttes".</p>
+                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Projet 1: Star 3D -->
+                <div class="bento-card" onclick="window.location.href='projets/star3D.html'">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/5z2ngXmQasY?si=0u5IacP_TbF6ip0d"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Projet 3D - Star Wars</h5>
+                        <p>Animation 3D thème Star Wars avec modélisation et rigging.</p>
+                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Projet 2: Jaws -->
+                <div class="bento-card" onclick="window.location.href='projets/jaws_generique.html'">
+                    <div class="card-image">
+                        <img src="images/screen_generiaue.png" alt="Revisite du générique de Jaws">
+                    </div>
+                    <div class="card-info">
+                        <h5>Revisite du Générique de Jaws</h5>
+                        <p>Réinterprétation artistique du générique de Jaws avec contrastes visuels et sonores
+                            personnels.</p>
+                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Projet 3: Leclerc Voyages -->
+                <div class="bento-card bento-wide" onclick="window.location.href='projets/stage_voyages.html'">
+                    <div class="card-image">
+                        <img src="images/voyages-Leclerc.jpg" alt="Stage Leclerc Voyages">
+                    </div>
+                    <div class="card-info">
+                        <h5>Stage chez Leclerc Voyages</h5>
+                        <p>Supports graphiques, tournages et montages vidéo. Maîtrise d'After Effects, Photoshop et
+                            Premiere Pro.</p>
+                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Projet 4: Wolfdog Production -->
+                <div class="bento-card" onclick="window.location.href='projets/stage_wolfdog.html'">
+                    <div class="card-image">
+                        <img src="images/480602438_659539989839406_8260283647509317323_n.jpg"
+                            alt="Stage Wolfdog Production">
+                    </div>
+                    <div class="card-info">
+                        <h5>Stage chez Wolfdog Production</h5>
+                        <p>Montages et tournages vidéo. Compétences en Blender, After Effects et Premiere Pro.</p>
+                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Projet 5: Insanitation Teaser -->
+                <div class="bento-card">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/UYIUQr4SW00?si=xMKozpXrGPbLK1IX"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Insanitation - Teaser Vidéo</h5>
+                        <p>Projet universitaire, Teaser vidéo motion design pour jeu vidéo en partenariat avec ACC.</p>
+                    </div>
+                </div>
+
+                <!-- Projet 6: Europe sur la Défensive -->
+                <div class="bento-card bento-wide">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/alf6KQkwvpA?si=hu0ad9v1CqkINKz6"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Europe sur la Défensive</h5>
+                        <p>Montage vidéo avec motion design intégré pour documentaire éducatif.</p>
+                    </div>
+                </div>
+
+                <!-- Reportage QLIO Flextory -->
+                <div class="bento-card">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/N7Anjb3-oxc?si=iXfIquhyHmJTKWCs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Reportage QLIO Flextory</h5>
+                        <p>Montage et réalisation d'un reportage pour QLIO Flextory.</p>
+                    </div>
+                </div>
+
+                <!-- Reportage Alsace Nautile Club -->
+                <div class="bento-card bento-wide">
+                    <div class="card-image">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/H1eWenagifo?si=o_5Pa4ykklI7YV2N"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-info">
+                        <h5>Reportage Alsace Nautile Club</h5>
+                        <p>Collaboration avec l'Alsace Nautile Club, Montage des plans.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="container d-flex justify-content-center p-4">
+            <a href="projets.html" class="btn"
+                style="border-radius: 50px; padding: 12px 30px; background-color: var(--base-color); color: var(--seconddary-color); font-weight: bold;">
+                Voir tous les projets <i class="bi bi-arrow-right"></i> </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <section class="header">
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                <a href="projets.html" aria-label="page des projets"> Projets </a>
+                <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+            </nav>
+        </section>
+
+        <p>2026 © Copyright Nolhan DESSEIGNE All rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Animation d'entrée pour la grille Bento
+        const bentoGrid = document.getElementById('bentoGrid');
+        if (bentoGrid) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const cards = bentoGrid.querySelectorAll('.bento-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        }
+    </script>
+    <script src="js/header-responsive.js"></script>
+    <script src="js/breadcrumb.js"></script>
+    <script src="js/breadcrumb-init.js"></script>
+</body>
+
+</html>

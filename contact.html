@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts | Portfolio Nolhan Desseigne</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+<body>
+    <header>
+        <section class="header">
+            <h1 class="logo-txt">Nolhan Monteur – Vidéo & Post‑production</h1>
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="logo, va sur la page acceuil"><img src="images/logo.png"
+                        alt="Logo de Nolhan Monteur" class="logo-main"></a>
+                <div class="nav-prime">
+                    <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                    <a href="projets.html" aria-label="page des projets"> Projets </a>
+                    <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                    <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+                </div>
+                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="pdf download" title="Pdf" target="_blank"
+                    class="cv" download > CV (.pdf) </a>
+                <div class="hamburger-menu" aria-label="Menu mobile">
+                    <i class="bi bi-list"></i>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <a href="#" class="bouton_up" aria-label="boutton pour remonter en haut de la page">
+        <span class="icone accueil" aria-hidden="true"></span>
+        <span class="hors-ecran">Accueil</span>
+        <i class="bi bi-caret-up-fill"></i>
+    </a>
+
+    <main class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h1 style="font-size: 3rem; color: var(--base-color); margin-bottom: 10px;">Contactez-moi</h1>
+            <p style="color: var(--tiercary-color); opacity: 0.8; font-size: 1.1rem;">Une idée de projet ? N'hésitez pas
+                à m'en faire part.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch" style="max-width: 1000px; margin: 0 auto;">
+            <!-- Colonne Informations -->
+            <div class="col-md-5">
+                <div class="bento-card h-100 p-4" style="border-radius: 24px; padding: 30px !important;">
+                    <h3 style="color: var(--base-color); margin-bottom: 30px; font-weight: 700;">Mes Coordonnées</h3>
+
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+33652538749">+33 6 52 53 87 49</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:nolhandesseigne@free.fr">nolhandesseigne@free.fr</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/nolhan-desseigne" target="_blank">Nolhan Desseigne</a>
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(149, 154, 216, 0.2);">
+                        <p style="font-size: 0.9rem; color: var(--tiercary-color); opacity: 0.7;">Je suis disponible
+                            pour des missions en freelance, des stages ou toute autre collaboration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne Formulaire -->
+            <div class="col-md-7">
+                <div class="bento-card h-100 p-4" style="border-radius: 24px; padding: 30px !important;">
+                    <form id="contactForm" action="https://formsubmit.co/nolhandesseigne@free.fr" method="POST"
+                        class="premium-form">
+                        <div class="row g-3">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Nom complet *</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                    title="Veuillez entrer une adresse email valide" placeholder="john@example.com"
+                                    required>
+                                <small class="form-text text-danger mt-1" id="emailError" style="display: none;">Format
+                                    d'email invalide.</small>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet *</label>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                placeholder="Proposition de collaboration" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5"
+                                placeholder="Décrivez votre projet..." required></textarea>
+                        </div>
+
+                        <!-- Anti-spam et config FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://fantomeed.github.io/portfolioo/contact.html">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Envoyer le message <i class="bi bi-send-fill ms-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section class="header">
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                <a href="projets.html" aria-label="page des projets"> Projets </a>
+                <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+            </nav>
+        </section>
+
+        <p> 2026 © Copyright Nolhan DESSEIGNE All rights Reserved. </p>
+    </footer>
+
+    <script>
+        // Validation stricte des emails
+        const contactForm = document.getElementById('contactForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+
+        emailInput.addEventListener('blur', function () {
+            validateEmail();
+        });
+
+        emailInput.addEventListener('input', function () {
+            if (emailError.style.display === 'none') return;
+            validateEmail();
+        });
+
+        function validateEmail() {
+            const email = emailInput.value.trim();
+            if (email === '') {
+                emailError.style.display = 'none';
+                return true;
+            }
+
+            if (!emailRegex.test(email)) {
+                emailError.style.display = 'block';
+                emailInput.classList.add('is-invalid');
+                return false;
+            } else {
+                emailError.style.display = 'none';
+                emailInput.classList.remove('is-invalid');
+                return true;
+            }
+        }
+
+        contactForm.addEventListener('submit', function (event) {
+            if (!validateEmail()) {
+                event.preventDefault();
+                emailInput.focus();
+            }
+        });
+    </script>
+
+    <script src="js/header-responsive.js"></script>
+    <script src="js/breadcrumb.js"></script>
+    <script src="js/breadcrumb-init.js"></script>
+</body>
+
+</html>
