@@ -23,4 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
             navPrime.classList.remove('active');
         }
     });
+
+    // Indicateur de page active dans la nav
+    if (navPrime) {
+        const pathParts = location.pathname.split('/').filter(Boolean);
+        const currentFile = pathParts[pathParts.length - 1] || 'index.html';
+        // Sous-répertoire courant (ex: "projets" pour projets/anglemort.html)
+        const currentSubdir = pathParts.length >= 2 ? pathParts[pathParts.length - 2] : null;
+
+        navPrime.querySelectorAll('a').forEach(function(link) {
+            const linkFile = link.getAttribute('href').split('/').pop();
+            const linkSection = linkFile.replace('.html', '');
+
+            if (linkFile === currentFile || (currentSubdir && currentSubdir === linkSection)) {
+                link.classList.add('active');
+            }
+        });
+    }
 });

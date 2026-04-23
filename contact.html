@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts | Portfolio Nolhan Desseigne</title>
+    <meta name="description" content="Contactez Nolhan Desseigne, monteur vidéo et motion designer. Disponible pour stages, missions freelance et collaborations.">
+    <meta name="author" content="Nolhan Desseigne">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact — Portfolio Nolhan Desseigne">
+    <meta property="og:description" content="Disponible pour stages, missions freelance et collaborations.">
+    <meta property="og:image" content="images/pdp_linkedin_trasparent.png">
+    <meta property="og:locale" content="fr_FR">
+
     <link rel="icon" type="image/x-icon" href="images/logo.png">
 
     <!-- Fonts -->
@@ -13,34 +22,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css" />
+</head>
+
+
 
 <body>
     <header>
         <section class="header">
-            <h1 class="logo-txt">Nolhan Monteur – Vidéo & Post‑production</h1>
+            <p class="logo-txt">Nolhan Desseigne — Monteur Vidéo & Post-production</p>
             <nav class="main-nav flex" role="navigation">
-                <a href="index.html" aria-label="logo, va sur la page acceuil" class="logo-link"><img src="images/logo.png"
+                <a href="index.html" aria-label="Accueil — retour à l'accueil" class="logo-link"><img src="images/logo.png"
                         alt="Logo de Nolhan Monteur" class="logo-main"></a>
                 <div class="nav-prime">
-                    <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
-                    <a href="projets.html" aria-label="page des projets"> Projets </a>
-                    <a href="exploration.html" aria-label="page des projets"> Explorations </a>
-                    <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+                    <a href="index.html" aria-label="Accueil">Accueil</a>
+                    <a href="projets.html" aria-label="Page des projets"> Projets </a>
+                    <a href="exploration.html" aria-label="Page des explorations"> Explorations </a>
+                    <a href="contact.html" aria-label="Page de contact"> Contacts </a>
                 </div>
-                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="pdf download" title="Pdf" target="_blank"
+                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="Télécharger le CV au format PDF" title="CV PDF" target="_blank"
                     class="cv" download > CV (.pdf) </a>
-                <div class="hamburger-menu" aria-label="Menu mobile">
+                <div class="hamburger-menu" aria-label="Ouvrir le menu mobile">
                     <i class="bi bi-list"></i>
                 </div>
             </nav>
         </section>
     </header>
 
-    <a href="#" class="bouton_up" aria-label="boutton pour remonter en haut de la page">
+    <a href="#" class="bouton_up" aria-label="Remonter en haut de page">
         <span class="icone accueil" aria-hidden="true"></span>
         <span class="hors-ecran">Accueil</span>
         <i class="bi bi-caret-up-fill"></i>
@@ -49,7 +64,7 @@
     <main class="container my-5 py-5">
         <div class="text-center mb-5">
             <h1 style="font-size: 3rem; color: var(--base-color); margin-bottom: 10px;">Contactez-moi</h1>
-            <p style="color: var(--tiercary-color); opacity: 0.8; font-size: 1.1rem;">Une idée de projet ? N'hésitez pas
+            <p style="color: var(--tertiary-color); opacity: 0.8; font-size: 1.1rem;">Une idée de projet ? N'hésitez pas
                 à m'en faire part.</p>
         </div>
 
@@ -75,7 +90,7 @@
                     </ul>
 
                     <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(149, 154, 216, 0.2);">
-                        <p style="font-size: 0.9rem; color: var(--tiercary-color); opacity: 0.7;">Je suis disponible
+                        <p style="font-size: 0.9rem; color: var(--tertiary-color); opacity: 0.7;">Je suis disponible
                             pour des missions en freelance, des stages ou toute autre collaboration.</p>
                     </div>
                 </div>
@@ -114,8 +129,8 @@
                         </div>
 
                         <!-- Anti-spam et config FormSubmit -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://fantomeed.github.io/portfolioo/contact.html">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_subject" value="Nouveau message — Portfolio Nolhan">
                         <input type="text" name="_honey" style="display:none">
 
                         <button type="submit" class="btn btn-primary w-100">
@@ -130,10 +145,10 @@
     <footer>
         <section class="header">
             <nav class="main-nav flex" role="navigation">
-                <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
-                <a href="projets.html" aria-label="page des projets"> Projets </a>
-                <a href="exploration.html" aria-label="page des projets"> Explorations </a>
-                <a href="contact.html" aria-label="page des contacts"> Contacts </a>
+                <a href="index.html" aria-label="Accueil">Accueil</a>
+                <a href="projets.html" aria-label="Page des projets"> Projets </a>
+                <a href="exploration.html" aria-label="Page des explorations"> Explorations </a>
+                <a href="contact.html" aria-label="Page de contact"> Contacts </a>
             </nav>
         </section>
 
