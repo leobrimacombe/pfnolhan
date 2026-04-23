@@ -1260,37 +1260,4 @@ footer {
     .bento-card h5 {
         font-size: 1.1rem;
     }
-}
-
-.row.g-4>.col-md-7 {
-    width: 100%;
-}
-
-/* Espacement général */
-.my-5,
-.py-5 {
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-}
-
-/* Très petits mobiles */
-@media (max-width: 480px) {
-    h7 {
-        font-size: 2rem;
-    }
-
-    .text-gradient {
-        font-size: 1.2rem;
-    }
-
-    .bento-card .card-info {
-        padding: 15px;
-    }
-
-    .bento-card h5 {
-        font-size: 1.1rem;
-    }
-}
+}
