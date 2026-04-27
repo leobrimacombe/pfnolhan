@@ -1,11 +1,15 @@
+/* ==========================================================================
+   VARIABLES ET RÉINITIALISATION (RESET)
+   ========================================================================== */
+
 :root {
-    --base-color: #959ad8;
-    --secondary-color: rgb(25, 25, 25);
-    --tertiary-color: rgb(235, 233, 236);
+    --base-color: #959ad8; /* Couleur d'accentuation (mauve) */
+    --secondary-color: rgb(25, 25, 25); /* Fond sombre */
+    --tertiary-color: rgb(235, 233, 236); /* Texte clair */
 }
 
 * {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Défilement fluide pour les ancres */
     scrollbar-width: auto;
     scrollbar-color: var(--base-color) var(--tertiary-color);
 }
@@ -17,7 +21,9 @@ body {
     background-color: var(--secondary-color);
 }
 
-/*---COMMUN---*/
+/* ==========================================================================
+   STYLES COMMUNS (UTILITAIRES)
+   ========================================================================== */
 
 .flex {
     display: flex;
@@ -76,7 +82,9 @@ footer {
     margin: auto;
 }
 
-/*---SCROLL ARROW---*/
+/* ==========================================================================
+   ANIMATION DE LA FLÈCHE DE DÉFILEMENT (SCROLL ARROW)
+   ========================================================================== */
 
 .arrow {
     position: absolute;
@@ -120,7 +128,9 @@ footer {
     }
 }
 
-/*---HEADER---*/
+/* ==========================================================================
+   EN-TÊTE (HEADER & NAVIGATION)
+   ========================================================================== */
 
 header {
     border-bottom: 1px solid rgba(149, 154, 216, 0.2);
@@ -246,7 +256,9 @@ header {
     z-index: 1000;
 }
 
-/*---MAIN---*/
+/* ==========================================================================
+   CONTENU PRINCIPAL (MAIN)
+   ========================================================================== */
 
 main {
     color: var(--tertiary-color);
@@ -420,7 +432,9 @@ span {
     color: var(--tertiary-color);
 }
 
-/*---FOOTER---*/
+/* ==========================================================================
+   PIED DE PAGE (FOOTER)
+   ========================================================================== */
 
 footer {
     background-color: var(--secondary-color);

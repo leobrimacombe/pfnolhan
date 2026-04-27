@@ -2,12 +2,14 @@
 <html lang="fr">
 
 <head>
+    <!-- Métadonnées et SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projets | Portfolio Nolhan Desseigne</title>
     <meta name="description" content="Tous les projets vidéo, motion design, graphisme et 3D de Nolhan Desseigne : courts métrages, stages, reportages, projets universitaires.">
     <meta name="author" content="Nolhan Desseigne">
 
+    <!-- Open Graph (Réseaux sociaux) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Projets — Portfolio Nolhan Desseigne">
     <meta property="og:description" content="Courts métrages, motion design, 3D et reportages.">
@@ -16,7 +18,7 @@
 
     <link rel="icon" type="image/x-icon" href="images/logo.png">
 
-    <!-- Fonts -->
+    <!-- Typographies & Icônes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,6 +30,7 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
+    <!-- Feuille de style personnalisée -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -263,28 +266,33 @@
     </footer>
 
     <script>
-        // Système de filtrage des projets
+        // Système de filtrage dynamique des projets
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
+                // Met à jour l'état visuel des boutons de filtre
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 const selectedFilter = btn.getAttribute('data-filter');
 
                 projectCards.forEach(card => {
+                    // On récupère les catégories de la carte (séparées par des espaces)
                     const categories = card.getAttribute('data-category').split(' ');
 
+                    // Si "Tous" est sélectionné ou si la carte appartient à la catégorie
                     if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
                         card.style.display = 'flex';
                         card.style.opacity = '0';
+                        // Petit délai pour déclencher l'animation d'apparition (transition CSS)
                         setTimeout(() => {
                             card.style.transition = 'opacity 0.3s ease-in';
                             card.style.opacity = '1';
                         }, 10);
                     } else {
+                        // Cache les cartes qui ne correspondent pas
                         card.style.display = 'none';
                     }
                 });

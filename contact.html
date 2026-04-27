@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+    <!-- Métadonnées et SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts | Portfolio Nolhan Desseigne</title>
@@ -156,17 +157,19 @@
     </footer>
 
     <script>
-        // Validation stricte des emails
+        // Validation dynamique et stricte du champ email du formulaire de contact
         const contactForm = document.getElementById('contactForm');
         const emailInput = document.getElementById('email');
         const emailError = document.getElementById('emailError');
 
         const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
 
+        // Valider quand le champ perd le focus
         emailInput.addEventListener('blur', function () {
             validateEmail();
         });
 
+        // Valider pendant la saisie si une erreur est déjà affichée
         emailInput.addEventListener('input', function () {
             if (emailError.style.display === 'none') return;
             validateEmail();
@@ -190,6 +193,7 @@
             }
         }
 
+        // Empêcher l'envoi du formulaire si l'email est invalide
         contactForm.addEventListener('submit', function (event) {
             if (!validateEmail()) {
                 event.preventDefault();
