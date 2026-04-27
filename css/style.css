@@ -248,6 +248,49 @@ header {
     transform: rotate(30deg) translate(100%, 100%);
 }
 
+.showreel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--base-color) 0%, #aeb4ff 100%);
+    color: var(--secondary-color) !important;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    box-shadow: 0 4px 15px rgba(149, 154, 216, 0.3);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: fit-content;
+}
+
+/* Effet de brillance (shimmer) sur le bouton CV */
+.showreel::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg) translate(-100%, -100%);
+    transition: transform 0.6s ease;
+}
+
+.showreel:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(149, 154, 216, 0.6);
+}
+
+.showreel:hover::after {
+    transform: rotate(30deg) translate(100%, 100%);
+}
+
 .hamburger-menu {
     display: none;
     color: var(--base-color);
@@ -255,7 +298,6 @@ header {
     cursor: pointer;
     z-index: 1000;
 }
-
 /* ==========================================================================
    CONTENU PRINCIPAL (MAIN)
    ========================================================================== */
@@ -564,7 +606,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* ===== SECTIONS BENTO GRID ===== */
+/* ===== SECTIONS BENTO GRID 
 
 .bento-section {
     padding: 60px 20px;
@@ -600,7 +642,7 @@ footer {
     border: 1px solid rgba(149, 154, 216, 0.1);
 }
 
-/* Carte cliquable = lien : reset de tous les styles anchor hérités */
+ Carte cliquable = lien : reset de tous les styles anchor hérités 
 a.bento-card,
 main a.bento-card {
     color: inherit;
@@ -729,7 +771,7 @@ a.bento-card:focus-visible {
     opacity: 0.8;
     transform: translateX(5px);
 }
-
+*/
 /* ============================================
    COMPOSANT BREADCRUMB (FIL D'ARIANE)
    ============================================ */
@@ -1305,5 +1347,476 @@ a.bento-card:focus-visible {
         content: '…';
         margin-right: 0.3rem;
         color: var(--breadcrumb-separator-color);
+    }
+}
+
+/* Carrousel Container */
+.projects-carousel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: var(--base-color) var(--seconddary-color);
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.projects-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+    background: var(--seconddary-color);
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+    background: var(--base-color);
+    border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+    background: #7b7fbc;
+}
+
+/* Project Cards */
+.project-card-horizontal {
+    min-width: 350px;
+    max-width: 350px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    
+    background: linear-gradient(135deg, rgba(149, 154, 216, 0.1) 0%, rgba(149, 154, 216, 0.05) 100%);
+    border: 2px solid var(--base-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: grab;
+}
+
+.project-card-horizontal:active {
+    cursor: grabbing;
+}
+
+.project-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(149, 154, 216, 0.3);
+    border-color: #7b7fbc;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-image iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-card-horizontal:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-info h5 {
+    color: var(--base-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.card-info p {
+    color: var(--tiercary-color);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card-link {
+    color: var(--base-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.card-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--base-color);
+    transition: width 0.3s ease;
+}
+
+.card-link:hover::after {
+    width: 100%;
+}
+
+.card-link:hover {
+    color: #7b7fbc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card-horizontal {
+        min-width: 280px;
+        max-width: 280px;
+    }
+    
+    .projects-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .scroll-hint {
+        font-size: 0.8rem;
+    }
+    
+    .card-info {
+        padding: 15px;
+    }
+    
+    .card-image {
+        height: 150px;
+    }
+    
+    .card-info h5 {
+        font-size: 1rem;
+    }
+    
+    .card-info p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-carousel {
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .project-card-horizontal {
+        min-width: 240px;
+        max-width: 240px;
+    }
+    
+    .card-image {
+        height: 120px;
+    }
+}
+
+/* ===== SECTIONS BENTO GRID ===== */
+
+.bento-section {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    margin: 20px 0;
+}
+
+.bento-section h2 {
+    color: var(--base-color);
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bento-card {
+    background: linear-gradient(135deg, rgba(149, 154, 216, 0.08) 0%, rgba(149, 154, 216, 0.02) 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    border: 1px solid rgba(149, 154, 216, 0.1);
+}
+
+/* Carte cliquable = lien : reset de tous les styles anchor hérités */
+a.bento-card,
+main a.bento-card {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+a.bento-card:hover,
+a.bento-card:focus-visible {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.bento-card:focus-visible {
+    outline: 2px solid var(--base-color);
+    outline-offset: 4px;
+}
+
+.bento-card[onclick] {
+    cursor: pointer;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(149, 154, 216, 0.4);
+}
+
+.bento-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.bento-tall {
+    grid-row: span 2;
+}
+
+.bento-card .card-image {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bento-card.bento-featured .card-image {
+    height: 70%;
+    flex-grow: 0;
+}
+
+.bento-card .card-image img,
+.bento-card .card-image iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.bento-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.bento-card .card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.bento-card.bento-featured .card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(25, 25, 25, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(149, 154, 216, 0.2);
+    height: 30%;
+}
+
+.bento-card h3,
+.bento-card h5 {
+    color: var(--base-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.bento-card p {
+    color: var(--tertiary-color);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.bento-card .card-link {
+    color: var(--base-color);
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.bento-card .card-link:hover {
+    opacity: 0.8;
+    transform: translateX(5px);
+}
+
+/* ===== MODAL SHOWREEL (morph depuis le bouton) ===== */
+.showreel-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.showreel-modal.is-active {
+    visibility: visible;
+    pointer-events: all;
+}
+
+.showreel-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+    pointer-events: none;
+}
+
+.showreel-modal.is-open .showreel-modal-backdrop {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    pointer-events: all;
+}
+
+.showreel-modal-content {
+    position: fixed;
+    background: linear-gradient(135deg, var(--base-color) 0%, #aeb4ff 100%);
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(149, 154, 216, 0.3);
+    transition:
+        width 0.35s cubic-bezier(0.7, 0, 0.3, 1),
+        left 0.35s cubic-bezier(0.7, 0, 0.3, 1),
+        height 0.45s cubic-bezier(0.7, 0, 0.3, 1),
+        top 0.45s cubic-bezier(0.7, 0, 0.3, 1),
+        border-radius 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.showreel-modal.is-open .showreel-modal-content {
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+}
+
+.showreel-modal-video {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.showreel-modal.is-open .showreel-modal-video {
+    opacity: 1;
+    transition-delay: 0.55s;
+}
+
+.showreel-modal-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+.showreel-modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.2s ease, background 0.2s ease;
+    line-height: 1;
+    z-index: 2;
+}
+
+.showreel-modal.is-open .showreel-modal-close {
+    opacity: 0.85;
+    pointer-events: all;
+    transition-delay: 0.2s;
+}
+
+.showreel-modal-close:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.showreel.is-morphing {
+    visibility: hidden;
+}
+
+@media (max-width: 600px) {
+    .showreel-modal-close {
+        top: 16px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
     }
 }

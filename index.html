@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <meta name="description" content="Portfolio de Nolhan Desseigne, monteur vidéo et motion designer en 3ᵉ année de BUT MMI. Courts métrages, motion design, 3D, post-production.">
     <meta name="author" content="Nolhan Desseigne">
     <meta name="keywords" content="Nolhan Desseigne, portfolio, monteur vidéo, motion designer, post-production, BUT MMI, Haguenau, After Effects, Premiere Pro, DaVinci Resolve, Blender">
-
+    
     <!-- Métadonnées pour les réseaux sociaux (Open Graph & Twitter) -->
 
     <!-- Open Graph / Facebook / LinkedIn -->
@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="images/pdp_linkedin_trasparent.png">
 
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-
+    
     <!-- Typographies & Icônes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +79,7 @@
 
     <main>
         <!-- Section Héro -->
-        <section class="container my-5 py-5 hero-section">
+        <section class="container hero-section">
             <div class="row align-items-center g-5">
                 <div class="col-md-5 text-center position-relative hero-img-col">
                     <div class="hero-img-glow"></div>
@@ -135,144 +135,180 @@
             </div>
         </section>
 
-        <!-- Section Mes Projets - Bento Grid -->
-        <section class="projects-section bento-section">
+        <button class="showreel" id="showreelBtn" aria-haspopup="dialog">Showreel 2K26</button>
+
+        <!-- Modal Showreel -->
+        <div class="showreel-modal" id="showreelModal" role="dialog" aria-modal="true" aria-label="Showreel vidéo">
+            <div class="showreel-modal-backdrop" id="showreelBackdrop"></div>
+            <div class="showreel-modal-content">
+                <button class="showreel-modal-close" id="showreelClose" aria-label="Fermer la vidéo">✕</button>
+                <div class="showreel-modal-video">
+                    <iframe id="showreelIframe" src="" frameborder="0"
+                        allow="autoplay; fullscreen; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Mes Projets - Carrousel Horizontal -->
+        <section class="projects-section">
             <h2>Mes Projets</h2>
 
-            <div class="bento-grid" id="bentoGrid">
+            <div class="projects-carousel" id="projectsCarousel">
 
-                <!-- Angles Mort (Featured) -->
-                <a class="bento-card bento-featured" href="projets/anglemort.html" aria-label="Projet Angles Mort — court métrage">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/bJQzZAbQZDo?si=4sSRH82-1utTj3Mb"
-                            title="Bande-annonce du court métrage Angles Mort" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <!-- Angles Mort -->
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="100%" height="200"
+                                src="https://www.youtube.com/embed/bJQzZAbQZDo?si=4sSRH82-1utTj3Mb"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5>Angles Mort</h5>
+                            <p>Réalisation d'un court métrage de 2 minutes hors générique sous le thème "Passer entre
+                                les gouttes".</p>
+                            <a href="projets/anglemort.html" class="card-link">En savoir plus →</a>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Angles Mort</h3>
-                        <p>Réalisation d'un court métrage de 2 minutes hors générique sous le thème « Passer entre les
-                            gouttes ».</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Projet 1: Star 3D -->
-                <a class="bento-card" href="projets/star3D.html" aria-label="Projet 3D Star Wars">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/5z2ngXmQasY?si=0u5IacP_TbF6ip0d"
-                            title="Animation 3D sur le thème Star Wars" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="100%" height="200"
+                                src="https://www.youtube.com/embed/5z2ngXmQasY?si=0u5IacP_TbF6ip0d"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5>Projet 3D - Star Wars</h5>
+                            <p>Animation 3D thème Star Wars avec modélisation et rigging.</p>
+                            <a href="projets/star3D.html" class="card-link">En savoir plus →</a>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Projet 3D — Star Wars</h3>
-                        <p>Animation 3D thème Star Wars avec modélisation et rigging.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Projet 2: Jaws -->
-                <a class="bento-card" href="projets/jaws_generique.html" aria-label="Revisite du générique de Jaws">
-                    <div class="card-image">
-                        <img src="images/screen_generiaue.png" alt="Image extraite de la revisite du générique de Jaws" loading="lazy">
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="images/screen_generiaue.png" alt="Revisite du générique de Jaws">
+                        </div>
+                        <div class="card-info">
+                            <h5>Revisite du Générique de Jaws</h5>
+                            <p>Réinterprétation artistique du générique de Jaws avec contrastes visuels et sonores
+                                personnels.</p>
+                            <a href="projets/jaws_generique.html" class="card-link">En savoir plus →</a>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Revisite du Générique de Jaws</h3>
-                        <p>Réinterprétation artistique du générique de Jaws avec contrastes visuels et sonores
-                            personnels.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Projet 3: Leclerc Voyages -->
-                <a class="bento-card bento-wide" href="projets/stage_voyages.html" aria-label="Stage chez Leclerc Voyages">
-                    <div class="card-image">
-                        <img src="images/voyages-Leclerc.jpg" alt="Stage chez Leclerc Voyages" loading="lazy">
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="images/voyages-Leclerc.jpg" alt="Stage Leclerc Voyages">
+                        </div>
+                        <div class="card-info">
+                            <h5>Stage chez Leclerc Voyages</h5>
+                            <p>Supports graphiques, tournages et montages vidéo. Maîtrise d'After Effects, Photoshop et
+                                Premiere Pro.</p>
+                            <a href="projets/stage_voyages.html" class="card-link">En savoir plus →</a>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Stage chez Leclerc Voyages</h3>
-                        <p>Supports graphiques, tournages et montages vidéo. Maîtrise d'After Effects, Photoshop et
-                            Premiere Pro.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Projet 4: Wolfdog Production -->
-                <a class="bento-card" href="projets/stage_wolfdog.html" aria-label="Stage chez Wolfdog Production">
-                    <div class="card-image">
-                        <img src="images/480602438_659539989839406_8260283647509317323_n.jpg"
-                            alt="Stage chez Wolfdog Production" loading="lazy">
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="images/480602438_659539989839406_8260283647509317323_n.jpg"
+                                alt="Stage Wolfdog Production">
+                        </div>
+                        <div class="card-info">
+                            <h5>Stage chez Wolfdog Production</h5>
+                            <p>Montages et tournages vidéo. Compétences en Blender, After Effects et Premiere Pro.</p>
+                            <a href="projets/stage_wolfdog.html" class="card-link">En savoir plus →</a>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Stage chez Wolfdog Production</h3>
-                        <p>Montages et tournages vidéo. Compétences en Blender, After Effects et Premiere Pro.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Projet 5: Insanitation Teaser -->
-                <div class="bento-card">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/UYIUQr4SW00?si=xMKozpXrGPbLK1IX"
-                            title="Teaser motion design du jeu Insanitation" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="card-info">
-                        <h3>Insanitation — Teaser Vidéo</h3>
-                        <p>Projet universitaire, teaser vidéo motion design pour jeu vidéo en partenariat avec ACC.</p>
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="100%" height="200"
+                                src="https://www.youtube.com/embed/UYIUQr4SW00?si=xMKozpXrGPbLK1IX"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5>Insanitation - Teaser Vidéo</h5>
+                            <p>Projet universitaire,Teaser vidéo motion design pour jeu vidéo en partenariat
+                                avec ACC.</p>
+                            <!--- <a href="p_categories/projets_md.html" class="card-link">En savoir plus →</a> --->
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projet 6: Europe sur la Défensive -->
-                <div class="bento-card bento-wide">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/alf6KQkwvpA?si=hu0ad9v1CqkINKz6"
-                            title="Trailer du webdocumentaire L'Europe sur la Défensive" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="card-info">
-                        <h3>Europe sur la Défensive</h3>
-                        <p>Montage vidéo avec motion design intégré pour documentaire éducatif.</p>
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="100%" height="200"
+                                src="https://www.youtube.com/embed/alf6KQkwvpA?si=hu0ad9v1CqkINKz6"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5>Europe sur la Défensive</h5>
+                            <p>Montage vidéo avec motion design intégré pour documentaire éducatif.</p>
+                            <!--- <a href="projets/europe_cuej.html" class="card-link">En savoir plus →</a> --->
+                        </div>
                     </div>
                 </div>
 
                 <!-- Reportage QLIO Flextory -->
-                <div class="bento-card">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/N7Anjb3-oxc?si=iXfIquhyHmJTKWCs"
-                            title="Reportage QLIO Flextory" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="card-info">
-                        <h3>Reportage QLIO Flextory</h3>
-                        <p>Montage et réalisation d'un reportage pour QLIO Flextory.</p>
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="auto" height="315"
+                                src="https://www.youtube.com/embed/N7Anjb3-oxc?si=iXfIquhyHmJTKWCs"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5>Reportage QLIO Flextory</h5>
+                            <p>Montage et réalisation d'un reportage pour QLIO Flextory.</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Reportage Alsace Nautile Club -->
-                <div class="bento-card bento-wide">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/H1eWenagifo?si=o_5Pa4ykklI7YV2N"
-                            title="Reportage de l'Alsace Nautile Club" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="card-info">
-                        <h3>Reportage Alsace Nautile Club</h3>
-                        <p>Collaboration avec l'Alsace Nautile Club, montage des plans.</p>
+                <div class="project-card-horizontal">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <iframe width="auto" height="315"
+                                src="https://www.youtube.com/embed/H1eWenagifo?si=o_5Pa4ykklI7YV2N"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5 class="card-title">Reportage Alsace Nautile Club</h5>
+                            <p class="card-text text-start">Collaboration avec l'Alsace Nautile Club, Montage des plans.
+                            </p>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -285,40 +321,61 @@
 
     </main>
 
-    <!-- Pied de page -->
     <footer>
         <section class="header">
-            <nav class="main-nav flex" role="navigation" aria-label="Navigation secondaire">
-                <a href="index.html" aria-label="Accueil">Accueil</a>
-                <a href="projets.html" aria-label="Page des projets"> Projets </a>
-                <a href="exploration.html" aria-label="Page des explorations"> Explorations </a>
-                <a href="contact.html" aria-label="Page de contact"> Contacts </a>
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                <a href="projets.html" aria-label="page des projets"> Projets </a>
+                <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                <a href="contact.html" aria-label="page des contacts"> Contacts </a>
             </nav>
         </section>
 
-        <p>2026 © Copyright Nolhan DESSEIGNE — Tous droits réservés.</p>
+        <p>2026 © Copyright Nolhan DESSEIGNE All rights Reserved. with the help of Leo Brimacombe</p>
     </footer>
 
-    <!-- Scripts JavaScript -->
     <script>
-        // Animation d'entrée progressive pour la grille Bento (Intersection Observer)
-        const bentoGrid = document.getElementById('bentoGrid');
-        if (bentoGrid) {
+        // Script pour gérer le scroll vertical → horizontal dans le carrousel
+        const projectsCarousel = document.getElementById('projectsCarousel');
+
+        if (projectsCarousel) {
+            // Événement wheel pour intercepter le scroll vertical
+            projectsCarousel.addEventListener('wheel', (event) => {
+                // Vérifier si on est en scrollant horizontalement déjà
+                const isScrollingHorizontally = projectsCarousel.scrollWidth > projectsCarousel.clientWidth;
+
+                if (isScrollingHorizontally) {
+                    event.preventDefault();
+
+                    // Déterminer la direction du scroll
+                    const scrollAmount = event.deltaY > 0 ? 50 : -50;
+
+                    // Appliquer le scroll horizontal
+                    projectsCarousel.scrollLeft += scrollAmount;
+                }
+            });
+
+            // Support pour le track pad (scroll lisse)
+            projectsCarousel.addEventListener('DOMMouseScroll', (event) => {
+                if (event.axis === event.VERTICAL_AXIS && event.detail !== 0) {
+                    event.preventDefault();
+                    projectsCarousel.scrollLeft += event.detail > 0 ? 50 : -50;
+                }
+            });
+
+            // Animation d'entrée - Fade in des cartes
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.animation = 'fadeIn 0.6s ease-in forwards';
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.1 });
 
-            const cards = bentoGrid.querySelectorAll('.bento-card');
+            const cards = projectsCarousel.querySelectorAll('.project-card-horizontal');
             cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = `all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) ${index * 0.1}s`;
+                card.style.animationDelay = `${index * 0.05}s`;
                 observer.observe(card);
             });
         }
@@ -341,6 +398,101 @@
     <script src="js/header-responsive.js"></script>
     <script src="js/breadcrumb.js"></script>
     <script src="js/breadcrumb-init.js"></script>
+    <script>
+        (function () {
+            const btn = document.getElementById('showreelBtn');
+            const modal = document.getElementById('showreelModal');
+            const backdrop = document.getElementById('showreelBackdrop');
+            const closeBtn = document.getElementById('showreelClose');
+            const iframe = document.getElementById('showreelIframe');
+            const content = modal.querySelector('.showreel-modal-content');
+            const SRC = 'https://www.youtube.com/embed/firZ3fPDiCo?autoplay=1&rel=0&modestbranding=1';
+
+            let state = 'closed'; // 'closed' | 'opening' | 'open' | 'closing'
+
+            function applyRect(rect) {
+                content.style.top = rect.top + 'px';
+                content.style.left = rect.left + 'px';
+                content.style.width = rect.width + 'px';
+                content.style.height = rect.height + 'px';
+            }
+
+            function open() {
+                if (state !== 'closed') return;
+                state = 'opening';
+
+                const rect = btn.getBoundingClientRect();
+
+                // Pose le contenu pile sur le bouton
+                applyRect(rect);
+                content.style.borderRadius = '100px';
+
+                modal.classList.add('is-active');
+                btn.classList.add('is-morphing');
+                document.body.style.overflow = 'hidden';
+
+                // Force reflow pour que la transition parte de la bonne valeur
+                void content.offsetWidth;
+
+                // Phase 1 : étirement horizontal
+                content.style.left = '0px';
+                content.style.width = '100vw';
+
+                // Phase 2 : étirement vertical après 350ms
+                setTimeout(() => {
+                    content.style.top = '0px';
+                    content.style.height = '100vh';
+                    content.style.borderRadius = '0px';
+                    modal.classList.add('is-open');
+                }, 350);
+
+                // Vidéo lancée une fois fullscreen (après fade-in du fond)
+                setTimeout(() => {
+                    iframe.src = SRC;
+                    state = 'open';
+                    closeBtn.focus();
+                }, 900);
+            }
+
+            function close() {
+                if (state !== 'open') return;
+                state = 'closing';
+
+                // Coupe la vidéo et le fond
+                iframe.src = '';
+                modal.classList.remove('is-open');
+
+                const rect = btn.getBoundingClientRect();
+
+                // Phase 1 : contraction verticale
+                content.style.top = rect.top + 'px';
+                content.style.height = rect.height + 'px';
+                content.style.borderRadius = '100px';
+
+                // Phase 2 : contraction horizontale
+                setTimeout(() => {
+                    const r = btn.getBoundingClientRect();
+                    content.style.left = r.left + 'px';
+                    content.style.width = r.width + 'px';
+                }, 450);
+
+                // Cleanup
+                setTimeout(() => {
+                    modal.classList.remove('is-active');
+                    btn.classList.remove('is-morphing');
+                    document.body.style.overflow = '';
+                    content.removeAttribute('style');
+                    state = 'closed';
+                    btn.focus();
+                }, 850);
+            }
+
+            btn.addEventListener('click', open);
+            closeBtn.addEventListener('click', close);
+            backdrop.addEventListener('click', close);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && state === 'open') close(); });
+        })();
+    </script>
 </body>
 
 </html>

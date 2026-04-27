@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <!-- Métadonnées et SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projets | Portfolio Nolhan Desseigne</title>
-    <meta name="description" content="Tous les projets vidéo, motion design, graphisme et 3D de Nolhan Desseigne : courts métrages, stages, reportages, projets universitaires.">
-    <meta name="author" content="Nolhan Desseigne">
-
-    <!-- Open Graph (Réseaux sociaux) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Projets — Portfolio Nolhan Desseigne">
-    <meta property="og:description" content="Courts métrages, motion design, 3D et reportages.">
-    <meta property="og:image" content="images/pdp_linkedin_trasparent.png">
-    <meta property="og:locale" content="fr_FR">
-
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-
-    <!-- Typographies & Icônes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <title> Projets | Portfolio Nolhan Desseigne</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -30,33 +12,32 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <!-- Feuille de style personnalisée -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <header>
         <section class="header">
-            <p class="logo-txt">Nolhan Desseigne — Monteur Vidéo & Post-production</p>
-            <nav class="main-nav flex" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" aria-label="Accueil — retour à l'accueil"><img src="images/logo.png"
+            <h1 class="logo-txt">Nolhan Monteur – Vidéo & Post‑production</h1>
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="logo, va sur la page acceuil"><img src="images/logo.png"
                         alt="Logo de Nolhan Monteur" class="logo-main"></a>
                 <div class="nav-prime">
-                    <a href="index.html" aria-label="Accueil">Accueil</a>
-                    <a href="projets.html" aria-label="Page des projets"> Projets </a>
-                    <a href="exploration.html" aria-label="Page des explorations"> Explorations </a>
-                    <a href="contact.html" aria-label="Page de contact"> Contacts </a>
+                    <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                    <a href="projets.html" aria-label="page des projets"> Projets </a>
+                    <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                    <a href="contact.html" aria-label="page des contacts"> Contacts </a>
                 </div>
-                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="Télécharger le CV au format PDF" title="CV PDF" target="_blank"
-                    class="cv" download> CV (.pdf) </a>
-                <div class="hamburger-menu" aria-label="Ouvrir le menu mobile">
+                <a href="pdf/Nolhan Desseigne CV stage.pdf" aria-label="pdf download" title="Pdf" target="_blank"
+                    class="cv" download > CV (.pdf) </a>
+                <div class="hamburger-menu" aria-label="Menu mobile">
                     <i class="bi bi-list"></i>
                 </div>
             </nav>
         </section>
     </header>
 
-    <a href="#" class="bouton_up" aria-label="Remonter en haut de page">
+    <a href="#" class="bouton_up" aria-label="boutton pour remonter en haut de la page">
         <span class="icone accueil" aria-hidden="true"></span>
         <span class="hors-ecran">Accueil</span>
         <i class="bi bi-caret-up-fill"></i>
@@ -68,7 +49,7 @@
 
             <!-- Boutons de filtrage -->
             <div class="container d-flex justify-content-center p-4">
-                <div class="filter-buttons btn-group" role="group" aria-label="Filtrer les projets par catégorie">
+                <div class="filter-buttons btn-group" role="group">
                     <button class="btn btn-outline-light filter-btn active" data-filter="all">Tous</button>
                     <button class="btn btn-outline-light filter-btn" data-filter="montage">Montages</button>
                     <button class="btn btn-outline-light filter-btn" data-filter="graphisme">Graphismes</button>
@@ -78,221 +59,236 @@
             </div>
 
             <!-- Conteneur des cartes -->
-            <div class="projects-container bento-grid" style="margin-top: 40px; margin-bottom: 40px;">
+            <div class="projects-container row row-cols-1 row-cols-md-3 g-4">
 
                 <!-- Angles Mort -->
-                <a class="project-card bento-card bento-featured" data-category="montage 3D"
-                    href="projets/anglemort.html" aria-label="Projet Angles Mort — court métrage">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="montage 3D">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/bJQzZAbQZDo?si=4sSRH82-1utTj3Mb"
-                            title="Court métrage Angles Mort" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Angles Mort</h5>
+                            <p class="card-text text-start">Réalisation d’un court métrage de 2 minutes hors générique
+                                sur le thème « Passer entre les gouttes », de la pré-production à la post-production,
+                                monté avec DaVinci Resolve, avec effets spéciaux sur Adobe After Effects et 3D sur
+                                Blender.</p>
+                        </div>
+                        <a href="projets/anglemort.html" class="btn">En savoir plus...</a>
                     </div>
-                    <div class="card-info">
-                        <h3>Angles Mort</h3>
-                        <p>Réalisation d'un court métrage de 2 minutes hors générique sur le thème « Passer entre les
-                            gouttes », de la pré-production à la post-production, monté avec DaVinci Resolve, avec
-                            effets spéciaux sur Adobe After Effects et 3D sur Blender.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Packshot JBL -->
-                <a class="project-card bento-card" data-category="montage"
-                    href="projets/packshot.html" aria-label="Packshot JBL">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="montage">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/lawB5QGDRhs?si=SDq6Erujof6DNc4P"
-                            title="Publicité fictive JBL" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Packshot JBL</h5>
+                            <p class="card-text text-start">Réalisation d’une pub fictive pour JBL : des amis en panne
+                                sur une route de campagne passent d’une ambiance tendue à une fête improvisée grâce à
+                                une enceinte portable. La scène se conclut par la mise en avant de ses atouts :
+                                autonomie, compacité et portabilité.</p>
+                        </div>
+                        <a href="projets/packshot.html" class="btn">En savoir plus...</a>
                     </div>
-                    <div class="card-info">
-                        <h3>Packshot JBL</h3>
-                        <p>Réalisation d'une pub fictive pour JBL : des amis en panne sur une route de campagne passent
-                            d'une ambiance tendue à une fête improvisée grâce à une enceinte portable.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Réalisation 3D Star Wars -->
-                <a class="project-card bento-card" data-category="3D"
-                    href="projets/star3D.html" aria-label="Réalisation 3D Star Wars">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="3D">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/5z2ngXmQasY?si=0u5IacP_TbF6ip0d"
-                            title="Animation 3D Star Wars" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Réalisation 3D Star Wars</h5>
+                            <p class="card-text text-start"> Réalisation d’une animation 3D sur le thème de Star Wars,
+                                de la conception à la finalisation, en utilisant différentes techniques telles que la
+                                modélisation et le rigging d’un squelette. </p>
+                        </div>
+                        <a href="projets/star3D.html" class="btn">En savoir plus...</a>
                     </div>
-                    <div class="card-info">
-                        <h3>Réalisation 3D Star Wars</h3>
-                        <p>Réalisation d'une animation 3D sur le thème de Star Wars, de la conception à la
-                            finalisation, en utilisant différentes techniques telles que la modélisation et le rigging.
-                        </p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
-                <!-- Projet Jaws -->
-                <a class="project-card bento-card" data-category="graphisme motion-design"
-                    href="projets/jaws_generique.html" aria-label="Revisite du générique de Jaws">
-                    <div class="card-image">
-                        <img src="images/screen_generiaue.png" alt="Image du générique de Jaws revisité" loading="lazy">
+                <!-- Projet jaws -->
+                <div class="col project-card" data-category="graphisme motion-design">
+                    <div class="border-secondary card h-100">
+                        <img src="images/screen_generiaue.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Revisite du generique de jaws</h5>
+                            <p class="card-text text-start">Dans le cadre d’un projet universitaire, j’ai réinterprété
+                                le générique
+                                de
+                                Jaws en y intégrant ma vision
+                                artistique. Tout en respectant l’atmosphère tendue et la menace sous-jacente du film,
+                                j’ai
+                                exploré des
+                                contrastes visuels et sonores pour créer un univers graphique personnel.</p>
+                        </div>
+                        <a href="projets/jaws_generique.html" class="btn">En savoir plus...</a>
+
                     </div>
-                    <div class="card-info">
-                        <h3>Revisite du générique de Jaws</h3>
-                        <p>Dans le cadre d'un projet universitaire, j'ai réinterprété le générique de Jaws en y
-                            intégrant ma vision artistique. J'ai exploré des contrastes visuels et sonores.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Stage Leclerc Voyages -->
-                <a class="project-card bento-card bento-wide" data-category="graphisme montage"
-                    href="projets/stage_voyages.html" aria-label="Stage chez Leclerc Voyages">
-                    <div class="card-image">
-                        <img src="images/voyages-Leclerc.jpg" alt="Stage Leclerc Voyages" loading="lazy">
+                <div class="col project-card" data-category="graphisme montage">
+                    <div class="border-secondary card h-100">
+                        <img src="images/voyages-Leclerc.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Stage chez Leclerc Voyages</h5>
+                            <p class="card-text text-start">Stage chez Leclerc Voyages, durant lequel j’ai conçu des
+                                supports graphiques, réalisé des tournages et montages vidéo. J’y ai renforcé mes
+                                compétences sur After Effects, Photoshop, Illustrator, Canva et Premiere Pro, tout en
+                                découvrant le fonctionnement et les dynamiques de la vie en entreprise.</p>
+                        </div>
+                        <a href="projets/stage_voyages.html" class="btn">En savoir plus...</a>
                     </div>
-                    <div class="card-info">
-                        <h3>Stage chez Leclerc Voyages</h3>
-                        <p>Conception des supports graphiques, tournages et montages vidéo. Compétences sur After
-                            Effects, Photoshop, Illustrator, Canva et Premiere Pro.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Stage Wolfdog Production -->
-                <a class="project-card bento-card" data-category="montage"
-                    href="projets/stage_wolfdog.html" aria-label="Stage chez Wolfdog Production">
-                    <div class="card-image">
-                        <img src="images/480602438_659539989839406_8260283647509317323_n.jpg" alt="Wolfdog Production" loading="lazy">
+                <div class="col project-card" data-category="montage">
+                    <div class="border-secondary card h-100">
+                        <img src="images/480602438_659539989839406_8260283647509317323_n.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Stage chez Wolfdog Production</h5>
+                            <p class="card-text text-start">Stage chez Wolfdog Production, où j'ai réalisé des montages
+                                et
+                                tournages
+                                vidéo. J'ai développé mes compétences sur Blender, After Effects et Premiere Pro, tout
+                                en
+                                découvrant la vie en entreprise.</p>
+                        </div>
+                        <a href="projets/stage_wolfdog.html" class="btn">En savoir plus...</a>
                     </div>
-                    <div class="card-info">
-                        <h3>Stage chez Wolfdog Production</h3>
-                        <p>Montages et tournages vidéo. J'ai développé mes compétences sur Blender, After Effects et
-                            Premiere Pro, tout en découvrant la vie en entreprise.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Insanitation teaser -->
-                <a class="project-card bento-card" data-category="motion-design graphisme"
-                    href="projets/teaser_acc.html" aria-label="Teaser vidéo Insanitation">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="motion-design graphisme">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/UYIUQr4SW00?si=xMKozpXrGPbLK1IX"
-                            title="Teaser motion design Insanitation" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Insanitation teaser vidéo</h5>
+                            <p class="card-text text-start"> Projet universitaire réalisé en équipe de trois, en
+                                partenariat avec des graphistes américains du Austin Comunity College (ACC). Nous avons
+                                conçu la communication visuelle (print, web) pour un jeu vidéo développé par des
+                                étudiants de l’ACC. J’ai réalisé le teaser vidéo pour leur jeux vidéo en motion design.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Insanitation — teaser vidéo</h3>
-                        <p>Projet universitaire réalisé en équipe en partenariat avec des graphistes de l'ACC. J'ai
-                            réalisé le teaser vidéo en motion design.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
-                <!-- Europe sur la défensive -->
-                <a class="project-card bento-card bento-wide" data-category="montage motion-design"
-                    href="projets/europe_cuej.html" aria-label="Trailer L'Europe sur la défensive">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <!-- Europe sur la defensive -->
+                <div class="col project-card" data-category="montage motion-design">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/alf6KQkwvpA?si=hu0ad9v1CqkINKz6"
-                            title="Trailer L'Europe sur la défensive" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">L'Europe sur la defensive trailer</h5>
+                            <p class="card-text text-start">Réalisation d'un trailer pour le webdocumentaire du CUEJ,
+                                "L’Europe sur la défensive". Utilisant des images et un montage fournies par les
+                                étudiants au CUEJ (Centre Universitaire d’Enseignement du Journalisme). Ce trailer avait
+                                pour objectif de teaser le site où étaient publiés leurs différents articles sur
+                                la défense de l'Europe. site du cuej <a
+                                    href="https://cuej.info/mini-sites/europe2024/">https://cuej.info/mini-sites/europe2024/</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>L'Europe sur la défensive</h3>
-                        <p>Réalisation d'un trailer pour le webdocumentaire du CUEJ. Ce trailer avait pour objectif de
-                            teaser le site où étaient publiés leurs articles.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Reportage QLIO Flextory -->
-                <a class="project-card bento-card" data-category="montage"
-                    href="projets/flextory.html" aria-label="Reportage QLIO Flextory">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="montage">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/N7Anjb3-oxc?si=iXfIquhyHmJTKWCs"
-                            title="Reportage QLIO Flextory" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Reportage QLIO Flextory</h5>
+                            <p class="card-text text-start">Réalisation d'un court-métrage en équipe. En suivant
+                                certaines consignes, nous avons écrit un scénario et réalisé les différentes séquences.
+                                Ensuite, j'ai participé au montage des plans en veillant à ce que le court-métrage soit
+                                dynamique, avec des musiques adaptées aux différentes parties de la vidéo. </p>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Reportage QLIO Flextory</h3>
-                        <p>Montage d'un court-métrage en équipe en veillant à ce que le rendu soit dynamique.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
                 <!-- Reportage Alsace Nautile Club -->
-                <a class="project-card bento-card bento-wide" data-category="montage"
-                    href="projets/nautile_club.html" aria-label="Reportage Alsace Nautile Club">
-                    <div class="card-image">
-                        <iframe width="100%" height="100%"
+                <div class="col project-card" data-category="montage">
+                    <div class="border-secondary card h-100">
+                        <iframe width="auto" height="315"
                             src="https://www.youtube.com/embed/H1eWenagifo?si=o_5Pa4ykklI7YV2N"
-                            title="Reportage Alsace Nautile Club" frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Reportage Alsace Nautile Club</h5>
+                            <p class="card-text text-start">Réalisation d'une vidéo par groupe en collaboration avec
+                                l'Alsace Nautile Club. Suivant leur attente, j'ai donc cadré les différents plans
+                                suivant les règles des tiers tout en prenant compte des espaces vides et de la lumière.
+                                J'ai ensuite fait le montage des plans.</p>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Reportage Alsace Nautile Club</h3>
-                        <p>Réalisation d'une vidéo par groupe en collaboration avec l'Alsace Nautile Club. Cadrage et
-                            montage.</p>
-                        <span class="card-link">En savoir plus <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
+                </div>
 
             </div>
         </section>
     </main>
     <footer>
         <section class="header">
-            <nav class="main-nav flex" role="navigation" aria-label="Navigation secondaire">
-                <a href="index.html" aria-label="Accueil">Accueil</a>
-                <a href="projets.html" aria-label="Page des projets"> Projets </a>
-                <a href="exploration.html" aria-label="Page des explorations"> Explorations </a>
-                <a href="contact.html" aria-label="Page de contact"> Contacts </a>
+            <nav class="main-nav flex" role="navigation">
+                <a href="index.html" aria-label="va sur la page acceuil">Accueil</a>
+                <a href="projets.html" aria-label="page des projets"> Projets </a>
+                <a href="exploration.html" aria-label="page des projets"> Explorations </a>
+                <a href="contact.html" aria-label="page des contacts"> Contacts </a>
             </nav>
         </section>
 
-        <p>2026 © Copyright Nolhan DESSEIGNE — Tous droits réservés.</p>
+        <p> 2026 © Copyright Nolhan DESSEIGNE All rights Reserved. with the help of Leo Brimacombe </p>
     </footer>
 
     <script>
-        // Système de filtrage dynamique des projets
+        // Système de filtrage des projets
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Met à jour l'état visuel des boutons de filtre
+                // Retirer la classe 'active' de tous les boutons
                 filterBtns.forEach(b => b.classList.remove('active'));
+                // Ajouter la classe 'active' au bouton cliqué
                 btn.classList.add('active');
 
                 const selectedFilter = btn.getAttribute('data-filter');
 
+                // Afficher ou masquer les cartes en fonction du filtre sélectionné
                 projectCards.forEach(card => {
-                    // On récupère les catégories de la carte (séparées par des espaces)
                     const categories = card.getAttribute('data-category').split(' ');
 
-                    // Si "Tous" est sélectionné ou si la carte appartient à la catégorie
                     if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
-                        card.style.display = 'flex';
+                        card.style.display = 'block';
+                        // Ajouter une animation fade-in
                         card.style.opacity = '0';
-                        // Petit délai pour déclencher l'animation d'apparition (transition CSS)
                         setTimeout(() => {
                             card.style.transition = 'opacity 0.3s ease-in';
                             card.style.opacity = '1';
                         }, 10);
                     } else {
-                        // Cache les cartes qui ne correspondent pas
                         card.style.display = 'none';
                     }
                 });

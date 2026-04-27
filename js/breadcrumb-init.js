@@ -33,13 +33,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * Calculer le chemin relatif vers la racine du PORTFOLIO
+ * Calculer le chemin relatif vers la racine du PORTFOLIO (pas du domaine)
  */
 function getBasePath() {
     const path = window.location.pathname;
-    let levels = 0;
-    if (path.includes('/projets/')) levels++;
-    if (path.includes('/en/')) levels++;
+    
+    // Trouver l'index du dossier "portfolioo"
+    const portfolioIndex = path.indexOf('/portfolioo/');
+    
+    if (portfolioIndex === -1) {
+        // Si on n'est pas dans portfolioo, retourner vide
+        return '';
+    }
+    
+    // Extraire la partie après /portfolioo/
+    const pathAfterPortfolio = path.substring(portfolioIndex + '/portfolioo/'.length);
+    
+    // Compter le nombre de niveaux après portfolioo
+    const levels = pathAfterPortfolio.split('/').filter(p => p && !p.endsWith('.html')).length;
     
     if (levels === 0) return '';
     return '../'.repeat(levels);
@@ -57,28 +68,68 @@ function generateBreadcrumbFromURL() {
         fileName = 'index.html';
     }
 
+    // Extraire uniquement les parties pertinentes du chemin (après portfolioo/)
+    const pathParts = path.split('/').filter(p => p && p !== 'index.html' && p !== 'portfolioo');
     const basePath = getBasePath();
-    const isProjetsFolder = path.includes('/projets/');
-    const isEnFolder = path.includes('/en/');
 
     const items = [];
 
+    console.log('=== DEBUG BREADCRUMB ===');
+    console.log('Path:', path);
+    console.log('FileName:', fileName);
+    console.log('PathParts:', pathParts);
+    console.log('BasePath:', basePath);
+    console.log('=======================');
+
     // Toujours ajouter l'accueil en premier
     items.push({
-        label: isEnFolder ? 'Home' : 'Accueil',
+        label: 'Accueil',
         url: basePath + 'index.html',
         icon: 'home'
     });
 
-    // Si on est à la racine de l'accueil
-    if (fileName === 'index.html' && !isProjetsFolder) {
-        return items;
+    // Pages racine (dans le dossier portfolioo/)
+    if (pathParts.length === 0 || (pathParts.length === 1 && pathParts[0].endsWith('.html'))) {
+        if (fileName === 'index.html') {
+            console.log('Items finaux:', items);
+            return items;
+        }
+
+        if (fileName === 'projets.html') {
+            items.push({
+                label: 'Projets',
+                url: 'projets.html',
+                isActive: true
+            });
+            console.log('Items finaux:', items);
+            return items;
+        }
+
+        if (fileName === 'exploration.html') {
+            items.push({
+                label: 'Explorations',
+                url: 'exploration.html',
+                isActive: true
+            });
+            console.log('Items finaux:', items);
+            return items;
+        }
+
+        if (fileName === 'contact.html') {
+            items.push({
+                label: 'Contacts',
+                url: 'contact.html',
+                isActive: true
+            });
+            console.log('Items finaux:', items);
+            return items;
+        }
     }
 
     // Pages de projets (projets/XXX.html)
-    if (isProjetsFolder) {
+    if (pathParts.includes('projets') && fileName !== 'projets.html') {
         items.push({
-            label: isEnFolder ? 'Projects' : 'Projets',
+            label: 'Projets',
             url: basePath + 'projets.html'
         });
 
@@ -87,49 +138,42 @@ function generateBreadcrumbFromURL() {
             label: projectName,
             isActive: true
         });
+        console.log('Items finaux (projet):', items);
         return items;
     }
 
-    // Pages en anglais (racine)
-    if (isEnFolder) {
+    // Pages en anglais
+    if (pathParts[0] === 'en') {
+        items[0].label = 'Home';
+
+        // Pages de projets en anglais (en/projets/XXX.html)
+        if (pathParts.length >= 2 && pathParts[1] === 'projets' && fileName !== 'projets.html') {
+            items.push({
+                label: 'Projects',
+                url: basePath + 'projets.html'
+            });
+            const projectName = getProjectName(fileName);
+            items.push({
+                label: projectName,
+                isActive: true
+            });
+            console.log('Items finaux (EN projet):', items);
+            return items;
+        }
+
+        // Autres pages en anglais (en/XXX.html)
         const enPageName = getEnglishPageName(fileName);
-        if (enPageName && fileName !== 'index.html') {
+        if (enPageName) {
             items.push({
                 label: enPageName,
                 isActive: true
             });
         }
+        console.log('Items finaux (EN):', items);
         return items;
     }
 
-    // Pages racine françaises
-    if (fileName === 'projets.html') {
-        items.push({
-            label: 'Projets',
-            url: 'projets.html',
-            isActive: true
-        });
-        return items;
-    }
-
-    if (fileName === 'exploration.html') {
-        items.push({
-            label: 'Explorations',
-            url: 'exploration.html',
-            isActive: true
-        });
-        return items;
-    }
-
-    if (fileName === 'contact.html') {
-        items.push({
-            label: 'Contacts',
-            url: 'contact.html',
-            isActive: true
-        });
-        return items;
-    }
-
+    console.log('Items finaux (défaut):', items);
     return items;
 }
 
