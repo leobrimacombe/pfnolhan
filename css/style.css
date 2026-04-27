@@ -1820,3 +1820,34 @@ a.bento-card:focus-visible {
         font-size: 1rem;
     }
 }
+
+/* ===== TRANSITION DE PAGE (overlay morph) ===== */
+.page-transition-overlay {
+    position: fixed;
+    z-index: 99999;
+    background: linear-gradient(135deg, var(--base-color) 0%, #aeb4ff 100%);
+    pointer-events: none;
+    will-change: width, height, top, left;
+}
+
+.page-transition-overlay.morphing {
+    transition:
+        width 0.28s cubic-bezier(0.7, 0, 0.3, 1),
+        left 0.28s cubic-bezier(0.7, 0, 0.3, 1),
+        height 0.38s cubic-bezier(0.7, 0, 0.3, 1),
+        top 0.38s cubic-bezier(0.7, 0, 0.3, 1),
+        border-radius 0.38s ease;
+}
+
+.page-transition-overlay.reveal {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.page-transition-overlay.reveal.fade-out {
+    opacity: 0;
+}
