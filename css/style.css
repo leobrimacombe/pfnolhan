@@ -495,6 +495,21 @@ span {
     color: var(--tertiary-color);
 }
 
+.card-clickable {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-clickable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(149, 154, 216, 0.25);
+    color: inherit;
+}
+
 /* ==========================================================================
    PIED DE PAGE (FOOTER)
    ========================================================================== */
@@ -1247,16 +1262,34 @@ a.bento-card:focus-visible {
     }
 
     .filter-buttons {
-        gap: 5px;
-        margin: 15px 0;
-        padding: 0 10px;
+        gap: 8px;
+        margin: 20px 0;
+        padding: 0;
+        flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        background: none;
+        border: none;
+        border-radius: 0;
+        scrollbar-width: none;
+        justify-content: flex-start;
+    }
+
+    .filter-buttons::-webkit-scrollbar {
+        display: none;
     }
 
     .filter-btn {
-        padding: 6px 12px;
+        padding: 8px 18px !important;
         font-size: 0.9rem;
+        flex-shrink: 0;
+        background: rgba(149, 154, 216, 0.08) !important;
+    }
+
+    .filter-btn.active {
+        box-shadow: none;
+        transform: none;
     }
 
     .bento-section h2 {
