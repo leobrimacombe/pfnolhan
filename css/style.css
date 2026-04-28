@@ -18,7 +18,7 @@
 }
 
 html {
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
     margin: auto;
     background-color: var(--secondary-color);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* ==========================================================================
@@ -192,6 +192,10 @@ header {
     padding: 6px;
     border-radius: 100px;
     border: 1px solid rgba(149, 154, 216, 0.1);
+}
+
+.cv-mobile {
+    display: none;
 }
 
 .nav-prime a {
@@ -1165,6 +1169,19 @@ a.bento-card:focus-visible {
 
     .cv {
         display: none;
+    }
+
+    .cv-mobile {
+        display: block;
+        background: linear-gradient(135deg, var(--base-color) 0%, #aeb4ff 100%) !important;
+        color: var(--secondary-color) !important;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-top: 4px;
+    }
+
+    .cv-mobile:hover {
+        background: linear-gradient(135deg, #7b7fbc 0%, var(--base-color) 100%) !important;
     }
 
     .logo-main {
