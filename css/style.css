@@ -8,10 +8,17 @@
     --tertiary-color: rgb(235, 233, 236); /* Texte clair */
 }
 
-* {
-    scroll-behavior: smooth; /* Défilement fluide pour les ancres */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
     scrollbar-width: auto;
     scrollbar-color: var(--base-color) var(--tertiary-color);
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -19,6 +26,7 @@ body {
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
     margin: auto;
     background-color: var(--secondary-color);
+    overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -57,7 +65,6 @@ a {
     background: var(--base-color);
     text-decoration: none;
     color: var(--secondary-color);
-    opacity: 75%;
     border-radius: 20%;
     display: flex;
     justify-content: center;
@@ -67,6 +74,16 @@ a {
     bottom: 40px;
     cursor: pointer;
     z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bouton_up.is-visible {
+    opacity: 0.75;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .hors-ecran {
@@ -249,7 +266,7 @@ header {
 }
 
 .showreel {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--base-color) 0%, #aeb4ff 100%);
@@ -265,8 +282,8 @@ header {
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    margin: auto;
-    width: fit-content;
+    margin-top: 24px;
+    cursor: pointer;
 }
 
 /* Effet de brillance (shimmer) sur le bouton CV */
@@ -1199,6 +1216,12 @@ a.bento-card:focus-visible {
         font-size: 14px;
     }
 
+    .showreel {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .bouton_up {
         height: 50px;
         width: 50px;
@@ -1750,16 +1773,22 @@ a.bento-card:focus-visible {
         height 0.45s cubic-bezier(0.7, 0, 0.3, 1),
         top 0.45s cubic-bezier(0.7, 0, 0.3, 1),
         border-radius 0.4s ease,
+        background 0.5s ease 0.2s,
         box-shadow 0.4s ease;
 }
 
 .showreel-modal.is-open .showreel-modal-content {
+    background: #000;
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
 }
 
 .showreel-modal-video {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1771,9 +1800,19 @@ a.bento-card:focus-visible {
 
 .showreel-modal-video iframe {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 100%;
     display: block;
     border: 0;
+}
+
+/* Viewport plus large que 16:9 (paysage / desktop) : on cale la vidéo en hauteur */
+@media (min-aspect-ratio: 16/9) {
+    .showreel-modal-video iframe {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+    }
 }
 
 .showreel-modal-close {
@@ -1811,13 +1850,14 @@ a.bento-card:focus-visible {
     visibility: hidden;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .showreel-modal-close {
-        top: 16px;
-        right: 16px;
-        width: 38px;
-        height: 38px;
+        top: max(12px, env(safe-area-inset-top));
+        right: max(12px, env(safe-area-inset-right));
+        width: 40px;
+        height: 40px;
         font-size: 1rem;
+        background: rgba(0, 0, 0, 0.7);
     }
 }
 

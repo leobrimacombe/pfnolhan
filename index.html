@@ -131,11 +131,10 @@
                         des jeux VR avec Unity et réalisé des projets 3D sur AutoCAD, enrichissant mes compétences
                         et mes projets.
                     </p>
+                    <button class="showreel" id="showreelBtn" aria-haspopup="dialog">Showreel 2K26</button>
                 </div>
             </div>
         </section>
-
-        <button class="showreel" id="showreelBtn" aria-haspopup="dialog">Showreel 2K26</button>
 
         <!-- Modal Showreel -->
         <div class="showreel-modal" id="showreelModal" role="dialog" aria-modal="true" aria-label="Showreel vidéo">
@@ -436,12 +435,12 @@
 
                 // Phase 1 : étirement horizontal
                 content.style.left = '0px';
-                content.style.width = '100vw';
+                content.style.width = '100dvw';
 
                 // Phase 2 : étirement vertical après 350ms
                 setTimeout(() => {
                     content.style.top = '0px';
-                    content.style.height = '100vh';
+                    content.style.height = '100dvh';
                     content.style.borderRadius = '0px';
                     modal.classList.add('is-open');
                 }, 350);
@@ -491,6 +490,14 @@
             closeBtn.addEventListener('click', close);
             backdrop.addEventListener('click', close);
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && state === 'open') close(); });
+        })();
+    </script>
+    <script>
+        (function () {
+            const btn = document.querySelector('.bouton_up');
+            window.addEventListener('scroll', function () {
+                btn.classList.toggle('is-visible', window.scrollY > 300);
+            }, { passive: true });
         })();
     </script>
 </body>
